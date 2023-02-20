@@ -1,11 +1,3 @@
-# Maven #
-
-# IDEA #
-.idea/
-
-# Eclipse #
-.settings/
-
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
