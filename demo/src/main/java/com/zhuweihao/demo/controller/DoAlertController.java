@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhuweihao.demo.pojo.DoAlert;
 import com.zhuweihao.demo.pojo.dto.AlertCountDTO;
 import com.zhuweihao.demo.service.impl.DoAlertServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
