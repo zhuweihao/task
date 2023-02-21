@@ -6,7 +6,11 @@
     <select id="getAlertCountByMonth" resultType="com.zhuweihao.demo.pojo.dto.AlertCountDTO">
         select date_format(create_time, '%Y-%m') createDate, count(*) as count from do_alert group by createDate
     </select>
-    <select id="getAlertByDay" resultType="com.zhuweihao.demo.pojo.DoAlert">
-        
+    <select id="getAlertByMonthPage" resultType="com.zhuweihao.demo.pojo.DoAlert">
+        select * from do_alert WHERE date_format(create_time, '%Y-%m')=#{date} ORDER BY create_time DESC
+    </select>
+
+    <select id="getAlertByDayPage" resultType="com.zhuweihao.demo.pojo.DoAlert">
+        select * from do_alert WHERE date_format(create_time, '%Y-%m-%d')=#{date} ORDER BY create_time
     </select>
 </mapper>

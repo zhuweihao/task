@@ -19,5 +19,8 @@ public interface DoAlertMapper extends BaseMapper<DoAlert> {
 
     List<AlertCountDTO> getAlertCountByMonth();
 
-    Page<DoAlert> getAlertByDay(Page page,Integer monitorType);
+    Page<DoAlert> getAlertByMonthPage(Page<DoAlert> page,String date);
+    Page<DoAlert> getAlertByDayPage(Page<DoAlert> page,String date);
+
+
 }
