@@ -16,7 +16,7 @@ import java.util.Map;
 @RestController
 public class TestController {
 
-    @GetMapping("/{id}/{name}")
+    @GetMapping("/testController/{id}/{name}")
     public Map<String, Object> getPerson(@PathVariable("id") Integer id,
                                          @PathVariable("name") String name) {
         Map<String,Object> objectMap=new HashMap<>();
@@ -25,7 +25,7 @@ public class TestController {
         return objectMap;
     }
 
-    @PostMapping("/save")
+    @PostMapping("/testController/save")
     public Map postMethod(@RequestBody String str){
         Map<String,Object> objectMap=new HashMap<>();
         objectMap.put("content",str);
@@ -35,8 +35,8 @@ public class TestController {
         return objectMap;
     }
 
-    @ResponseBody
-    @GetMapping("/testxml")
+
+    @GetMapping("/testController/testxml")
     public Person getPerson(){
         Person person = new Person();
         person.setId(3);

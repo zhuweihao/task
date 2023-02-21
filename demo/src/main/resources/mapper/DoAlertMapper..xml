@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhuweihao.demo.mapper.DoAlertMapper">
+    <select id="getAlertCountByMonth" resultType="com.zhuweihao.demo.pojo.dto.AlertCountDTO">
+        select date_format(create_time, '%Y-%m') createDate, count(*) as count from do_alert group by createDate
+    </select>
+    <select id="getAlertByDay" resultType="com.zhuweihao.demo.pojo.DoAlert">
+        
+    </select>
+</mapper>
